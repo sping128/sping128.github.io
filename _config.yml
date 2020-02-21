@@ -1,0 +1,24 @@
+# toggle for showing staff
+show_staff: true
+
+# collections
+collections:
+  authors:
+    output: true
+
+# layout setting
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
