@@ -1,0 +1,17 @@
+---
+author: sping128
+---
+I have heard about this technique so many times recently, but I haven't gotten a chance to use it during a programming contest. I think this technique is very interesting and pretty cool, so I decide to implement it to solve a problem, [QTREE](https://www.spoj.com/problems/QTREE/). The problem is that you're given a tree of N nodes and a number of operations. Each query can be one of the following:
+
+1. **CHANGE a b**: update the cost of the edge **a** to **b**
+2. **QUERY a b**: print the maximum edge cost on the path from **a** to **b**
+
+So you're asked to perform these operations. This problem would be very easy to solve if the graph is just a chain (not a tree). In that case, you can easily solve it by using a segment tree that can perform each operation in <code>O(log N)</code>. I claim that this problem can also be solved by segment trees. This is how Heavy Light Decomposition (HLD) technique comes into play. Before I talk about HLD, I will explain how HLD can solve this problem. Even though the given graph is a tree, we still decompose it into several chains. If we can do this, we can perform each operation on separate chains and combine the results together. We already know that performing an operation on a chain takes <code>O(log N)</code> by using a segment tree, so we need to decompose the tree into some number of chains. And HLD can do this and guarantee that the number of chains is <code>O(log N)</code>. So it will take us <code>O(log N)^2</code> to perform each operation which is fast enough to solve this problem. A tree after applied HLD will look like this:
+
+<p align="center">
+  <img src="/img/post-2014-06-03-p1.png">
+</p>
+
+The colors indicate different chains and the numbers in the nodes indicate the chain heads. I won't talk about the implementation detail (I will post my code I wrote to solve this QTREE problem on the bottom. The idea is that we do one Depth-First search to gather information (subtree's size, each node's parent), build HLD, then build a segment tree over all the chains. So if we want to answer **QUERY u v**, we can just first find the lowest common ancestor between **u** and **v** which is **node 1**, then we find the maximum edge cost on the path from **u** to **node 1** and the maximum edge cost on the path from **v** to **node 1**. To find the maximum edge cost on each path, we can just crawl up the chains. For example, we can crawl up from **node u** to **node 1** by visiting the pink chain, red chain, and green chain. Upon visiting each chain, we can ask our segment tree what the maximum edge cost between me and the head of this chain. We take the maximum among those and that will give us the answer. This is a basic application of HLD. You can imagine that we can do any kinds of operations we can do on a chain. We can just make a different functionality of a segment tree to handle those operation. HLD is just a technique to decompose a tree into chains. HLD should be able to tell us how to crawl up the tree chain-by-chain as well.
+
+There is a similar technique to HLD. For example, we can divide an array into <code>O(&radic;N)</code> parts. Each part contains <code>O(&radic;N)</code> elements. When we're asked to perform some operation on the array, we can just do it separately on each part (which should be easier somehow depending on a problem). We might be able to reduce time to perform each operation from <code>O(N)</code> to <code>O(&radic;N)</code>.
