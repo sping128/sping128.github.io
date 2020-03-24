@@ -17,6 +17,11 @@ a {
 
 }
 
+.post-read-more {
+  color: black;
+  font-weight: 800;
+}
+
 .avatar-container {
   position: absolute;
   left: 50%;
@@ -137,4 +142,11 @@ footer {
   margin-top: 50px;
   font-size: 14px;
   background-color: #F5F5F5;
+}
+
+.post-meta {
+  color: #808080;
+  font-size: 18px;
+  font-style: italic;
+  margin: 0 0 10px;
 }

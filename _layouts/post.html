@@ -5,10 +5,12 @@ layout: default
 	<div class="page-heading">
 		<h1>{{ page.title }}</h1>
 	</div>
+  <p class="post-meta">
+    Posted on {{ page.date | date_to_string }}
+  </p>
 	<p>
-		{{ page.date | date_to_string }} -
 		{% if site.show_staff %}
-			<a href="/authors/{{ page.author }}.html">{{ page.author }}</a>
+			By&nbsp;<a href="/authors/{{ page.author }}.html">{{ page.author }}</a>
 		{% else %}
 			{{ page.author }}
 		{%- endif -%}

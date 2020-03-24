@@ -22,3 +22,7 @@ defaults:
       path: ""
     values:
       layout: "default"
+
+# Excerpt Word Length
+# Truncates the excerpt to the specified number of words on the index page
+excerpt_length: 100
