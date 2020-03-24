@@ -48,6 +48,20 @@ a {
   display: block;
 }
 
+.top-nav-short {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.top-nav-long {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .navbar-menu {
   float: right;
   padding: 15px 15px;
@@ -85,6 +99,7 @@ a {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 180px;
   font-size: 18px;
 }
 
@@ -106,9 +121,12 @@ h2 {
 
 
 .navbar-main {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
   display: block;
   clear: both;
-  padding: 20px;
   min-height: 50px;
   margin-bottom: 20px;
   border: 1px solid transparent;
