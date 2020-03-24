@@ -1,0 +1,11 @@
+footer:
+  - name: "Email me"
+    baseURL: "mailto:sping128@gmail.com"
+  - name: "Facebook"
+    baseURL: "https://www.facebook.com/ping128"
+  - name: "Instagram"
+    baseURL: "https://www.instagram.com/sping128"
+  - name: "GitHub"
+    baseURL: "https://github.com/sping128"
+  - name: "LinkedIn"
+    baseURL: "https://linkedin.com/in/siwakorn-srisakaokul-85668541/"

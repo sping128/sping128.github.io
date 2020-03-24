@@ -1,0 +1,9 @@
+<footer>
+  <p>
+    <a href="{{ site.url}}">Personal Blog</a>
+    &nbsp;&copy;&nbsp;{{ site.time | date: '%Y' }}
+    {% for item in site.data.social-networks["footer"] %}
+      &bullet;&nbsp;<a href="{{ item.baseURL }}">{{ item.name }}</a>
+    {% endfor %}
+  </p>
+</footer>
