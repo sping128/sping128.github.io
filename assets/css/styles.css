@@ -1,0 +1,75 @@
+body{
+    margin: 0px;
+    padding: 0;
+    color: #404040;
+    font-size: 10pt;
+    font-family: 'Calini', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+
+a:hover {
+  color: #0085A1;
+}
+
+a {
+  color: #008AFF;
+  text-decoration: none;
+
+}
+
+.avatar-container {
+  position: absolute;
+  left: 50%;
+  width: 100px;
+}
+
+.avatar-container .avatar-img-border {
+  width: 100%;
+  border-radius: 50%;
+  margin-left: -50%;
+  display: inline-block;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}
+
+.avatar-container .avatar-img {
+  width: 100%;
+  border-radius: 50%;
+  display: block;
+}
+
+.navbar-menu {
+  float: right;
+  padding: 15px 15px;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.navbar-header {
+  float: left;
+  padding: 15px 15px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.navbar-header a {
+  color: #404040;
+}
+.navbar-header a:hover {
+  color: #0085A1;
+}
+
+
+.navbar-main {
+  display: block;
+  clear: both;
+  padding: 20px;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  font-size: 18px;
+  color: #404040;
+  background-color: #F5F5F5;
+  font-family: 'Calini', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}

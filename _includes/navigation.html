@@ -1,9 +1,23 @@
-<nav>
-  {% for item in site.data.navigation["top-bar"] %}
-  	{% if site.show_staff or item.name != 'Staff' %}
-	  	<a href="{{ item.link }}" {% if page.url == item.link %} class="current"{% endif %}>
-	      {{ item.name }}
-	    </a>|
-  	{%- endif -%}
-  {% endfor %}
+<nav class="navbar-main">
+	<div class="navbar-header">
+		<a href="/">Siwakorn Srisakaokul (aka. sping128)</a>
+   </div>
+
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+	    <a href="/">
+	      <img class="avatar-img" src="/img/avatar-img.jpg" />
+			</a>
+	  </div>
+	</div>
+
+	<div class="navbar-menu">
+	  {% for item in site.data.navigation["top-bar"] %}
+	  	{% if site.show_staff or item.name != 'Staff' %}
+		  	<a href="{{ item.link }}" {% if page.url == item.link %} class="current"{% endif %}>
+		      {{ item.name }}
+		    </a>&nbsp;&nbsp;
+	  	{%- endif -%}
+	  {% endfor %}
+	</div>
 </nav>
