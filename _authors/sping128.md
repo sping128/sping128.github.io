@@ -1,6 +1,6 @@
 ---
 short_name: sping128
 name: Siwakorn Srisakaokul
-position: MS student
+position: MS Student
 ---
 My nickname is Ping.
