@@ -28,18 +28,20 @@ This can be solved by Dynamic Programming:
 
 ```cpp
 long long count(vector<int>&x, int kk) {
-    // dp[i] = the number of ways to combine x into i tries
-    // C[i][j] = (i choose j)
-    int sz = x.size();
-    for (int i = 1; i <= kk; i++) {
-        dp[i] = 1;
-        for (int j = 0; j < sz; j++)
-            dp[i] = (dp[i] * C[i][x[j]]) % MOD; // there are i tries, choose x[j] tries for x[j] subtrees
-        for (int j = 1; j < i; j++)
-            // we subtract dp[i] by the number of ways that we don't use all i tries.
-            dp[i] = (((dp[i] - dp[j] * C[i][j]) % MOD) + MOD) % MOD;
-    }
-    return dp[kk];
+  // dp[i] = the number of ways to combine x into i tries
+  // C[i][j] = (i choose j)
+  int sz = x.size();
+  for (int i = 1; i <= kk; i++) {
+    dp[i] = 1;
+    for (int j = 0; j < sz; j++)
+      // there are i tries, choose x[j] tries for x[j] subtrees
+      dp[i] = (dp[i] * C[i][x[j]]) % MOD;
+    for (int j = 1; j < i; j++)
+      // we subtract dp[i] by the number of ways that we don't use
+      // all i tries.
+      dp[i] = (((dp[i] - dp[j] * C[i][j]) % MOD) + MOD) % MOD;
+  }
+  return dp[kk];
 }
 ```
 
