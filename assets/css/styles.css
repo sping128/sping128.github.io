@@ -79,12 +79,12 @@ a {
 
 @media (min-width: 768px) {
   .container {
-    width: 650px;
+    width: 700px;
   }
 }
 @media (min-width: 992px) {
   .container {
-    width: 870px;
+    width: 920px;
   }
 }
 @media (min-width: 1200px) {
