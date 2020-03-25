@@ -1,5 +1,5 @@
 # toggle for showing staff
-show_staff: true
+show_staff: false
 
 # collections
 collections:
