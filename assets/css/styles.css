@@ -182,6 +182,7 @@ code {
   font-size: 90%;
   color: #c7254e;
   background-color: #efdce1;
+  border-radius: 5px;
 }
 kbd {
   padding: 2px 4px;
@@ -191,6 +192,7 @@ kbd {
   border-radius: 3px;
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .25);
           box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .25);
+  border-radius: 5px;
 }
 kbd kbd {
   padding: 0;
@@ -209,6 +211,7 @@ pre {
   word-break: break-all;
   word-wrap: break-word;
   background-color: #572836;
+  border-radius: 5px;
 }
 pre code {
   padding: 0;
@@ -216,4 +219,5 @@ pre code {
   color: inherit;
   white-space: pre-wrap;
   background-color: transparent;
+  border-radius: 5px;
 }
